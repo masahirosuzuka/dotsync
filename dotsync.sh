@@ -59,7 +59,7 @@ if [ "$1" == "link" ]; then
         head="$file:0:1"
         if [ head != "." ]; then
           command="ln -s "${filepath}" ~/."${file}
-          echo ${command}
+          eval ${command}
         fi
       fi
     done
@@ -76,7 +76,7 @@ if [ "$1" == "delink" ]; then
         head="$file:0:1"
         if [ head != "." ]; then
           command="rm ~/."${file}
-          echo ${command}
+          eval ${command}
         fi
       fi
     done
